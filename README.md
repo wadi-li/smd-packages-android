@@ -2,7 +2,7 @@
 
 Офлайн-справочник синонимов SMD-корпусов: обозначения JEDEC, EIAJ/JEITA и производителей (NXP/Nexperia, TI, ADI/Linear, Maxim, onsemi, Sanyo, Toshiba, ROHM, Renesas, Panasonic, Infineon, Diodes, Vishay, ST).
 
-- **APK:** [последний релиз](https://github.com/wadi-li/smd-packages-android/releases/latest) — Android 7.0+, без разрешений и без интернета.
+- **APK:** [SMD-packages-1.0.apk](https://wadi-li.github.io/smd-packages-android/SMD-packages-1.0.apk) (также лежит в `docs/`) — Android 7.0+, без разрешений и без интернета.
 - **Веб-версия (PWA):** https://wadi-li.github.io/smd-packages-android/
 
 ## Разделы
