@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SMD-корпуса — справочник для Android</title>
+<meta name="description" content="Офлайн-справочник синонимов SMD-корпусов: JEDEC, EIAJ/JEITA, NXP, TI, ADI, Toshiba, ROHM и др. APK для Android и веб-версия.">
+<link rel="icon" href="app/favicon-32.png">
+<style>
+:root{--bg:#f3f5f8;--card:#fff;--bd:#d7dde4;--tx:#18212b;--mut:#5e6b78;--acc:#0b5cad;--acc2:#e6f0fb}
+[data-theme=dark]{--bg:#11161c;--card:#1a2129;--bd:#2f3a46;--tx:#e2e8ee;--mut:#93a2b0;--acc:#5aa5f0;--acc2:#1d3147}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx)}
+.w{max-width:860px;margin:0 auto;padding:24px 18px 48px}
+.top{display:flex;align-items:center;gap:14px}.top img{width:64px;height:64px;border-radius:14px}
+h1{font-size:26px;margin:0;line-height:1.2}.sub{color:var(--mut);margin:2px 0 0}
+.th{margin-left:auto;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:10px;height:40px;min-width:44px;font-size:18px;cursor:pointer}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 8px}
+.b{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:48px;padding:0 18px;border-radius:12px;text-decoration:none;font-weight:600;border:1px solid var(--bd);background:var(--card);color:var(--tx)}
+.b.p{background:var(--acc);border-color:var(--acc);color:#fff}
+.meta{color:var(--mut);font-size:13px;word-break:break-all}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px 18px;margin-top:16px}
+h2{font-size:18px;margin:0 0 8px}ol,ul{margin:0;padding-left:22px}li{margin:4px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:6px}
+.it{background:var(--acc2);border-radius:10px;padding:10px 12px}.it b{display:block;font-size:20px}.it span{color:var(--mut);font-size:13px}
+code{background:var(--acc2);padding:1px 5px;border-radius:5px;font-size:14px}
+.note{color:var(--mut);font-size:14px}
+[data-theme=dark] .b.p{color:#0b1a2a}
+</style></head>
+<body><div class="w">
+<div class="top"><img src="app/icon-192.png" alt=""><div><h1>SMD-корпуса</h1><p class="sub">Офлайн-справочник синонимов корпусов для Android</p></div>
+<button class="th" id="th" title="Тема">☾</button></div>
+<div class="cta">
+ <a class="b p" href="https://github.com/wadi-li/smd-packages-android/releases/latest/download/SMD-packages.apk">⬇ Скачать APK ( КБ)</a>
+ <a class="b" href="app/index.html">Открыть веб-версию</a>
+ <a class="b" href="smd-packages.html" download>Один HTML-файл</a>
+ <a class="b" href="https://github.com/wadi-li/smd-packages-android">Исходники на GitHub</a>
+</div>
+<div class="meta">Версия 1.0 · Android 7.0+ · пакет ru.lymar.smdpackages<br>SHA-256 APK: </div>
+
+<div class="card"><h2>Что внутри</h2>
+<div class="grid">
+ <div class="it"><b>78</b><span>корпусов полупроводников: SOD, SOT, SC-70, SOIC/TSSOP, QFN/DFN, LQFP, силовые</span></div>
+ <div class="it"><b>26</b><span>типоразмеров чип-резисторов и MLCC, дюймовые и метрические коды</span></div>
+ <div class="it"><b>24</b><span>корпусов танталовых конденсаторов (EIA-535 и буквы производителей)</span></div>
+ <div class="it"><b>35</b><span>алюминиевых V-chip и полимерных (POSCAP, SP-Cap, OS-CON)</span></div>
+</div>
+<ul style="margin-top:10px">
+ <li>Обозначения JEDEC, EIAJ/JEITA, NXP/Nexperia, TI, ADI/Linear, Maxim, onsemi, Sanyo, Toshiba, ROHM, Renesas, Panasonic, Infineon, Diodes, Vishay, ST.</li>
+ <li>Поиск сразу по всем разделам без учёта дефисов, скобок и «×/x»: <code>sc88a</code> найдёт SC-88A, <code>0603</code> — и 0603, и 1608.</li>
+ <li>Карточки и таблица, избранное, фильтр по группам, выбор столбцов, тёмная тема, экспорт в CSV (разделитель «;», UTF-8 с BOM).</li>
+ <li>Вкладка сравнения электрических характеристик MLCC и танталовых конденсаторов.</li>
+</ul></div>
+
+<div class="card"><h2>Установка APK</h2><ol>
+ <li>Нажмите «Скачать APK» на телефоне.</li>
+ <li>Откройте загруженный файл. Если Android попросит, разрешите установку из этого источника (браузера или файлового менеджера).</li>
+ <li>Приложение появится в меню как «SMD-корпуса». Интернет ему не нужен и разрешений не запрашивает.</li>
+</ol><p class="note">APK подписан собственным ключом автора, не через Google Play, поэтому Play Защита может показать предупреждение о неизвестном разработчике.</p></div>
+
+<div class="card"><h2>Веб-версия без установки</h2>
+<p style="margin:0">Откройте «Веб-версию» в Chrome на Android и выберите в меню «Добавить на главный экран». После первого открытия она работает офлайн.</p></div>
+
+<div class="card"><h2>Оговорки</h2>
+<p class="note" style="margin:0">«≈» — близкий, но не идентичный корпус. Пустая ячейка — обозначение не найдено или корпус не выпускается. Часть кодов внесена без первоисточника — перед применением сверяйте посадочное место с чертежом в даташите.</p></div>
+</div>
+<script>
+const r=document.documentElement;try{const t=localStorage.getItem("smd_theme");if(t)r.dataset.theme=JSON.parse(t)}catch(e){}
+document.getElementById("th").onclick=()=>{r.dataset.theme=r.dataset.theme==="dark"?"light":"dark";try{localStorage.setItem("smd_theme",JSON.stringify(r.dataset.theme))}catch(e){}};
+</script>
+</body></html>

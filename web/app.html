@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b5cad">
+<title>SMD-корпуса — справочник</title>
+<!--PWA-HEAD-->
+<style>
+:root{--bg:#f3f5f8;--card:#fff;--bd:#d7dde4;--tx:#18212b;--mut:#5e6b78;--acc:#0b5cad;--acc-s:#e6f0fb;--hl:#ffe58a;--th:#eef2f6;--sh:0 1px 2px rgba(0,0,0,.06)}
+[data-theme=dark]{--bg:#11161c;--card:#1a2129;--bd:#2f3a46;--tx:#e2e8ee;--mut:#93a2b0;--acc:#5aa5f0;--acc-s:#1d3147;--hl:#7a6210;--th:#212a34;--sh:none}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx);-webkit-tap-highlight-color:transparent}
+header{position:sticky;top:0;z-index:5;background:var(--acc);color:#fff;padding:10px 12px 10px;padding-top:calc(10px + env(safe-area-inset-top))}
+[data-theme=dark] header{background:#15324f}
+.hrow{display:flex;align-items:center;gap:8px}
+h1{font-size:17px;margin:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ib{background:rgba(255,255,255,.16);border:0;color:#fff;border-radius:8px;min-width:38px;height:36px;font-size:17px;cursor:pointer;padding:0 8px}
+.ib.on{background:#fff;color:var(--acc)}
+.search{margin-top:8px;position:relative}
+.search input{width:100%;height:40px;border-radius:10px;border:0;padding:0 38px 0 12px;font-size:16px;background:#fff;color:#18212b}
+[data-theme=dark] .search input{background:#0f141a;color:#e2e8ee}
+.search input::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+.search button{position:absolute;right:4px;top:4px;height:32px;width:32px;border:0;background:none;font-size:18px;color:#7b8794;cursor:pointer}
+.bar{display:flex;gap:6px;align-items:center;padding:8px 12px;flex-wrap:wrap}
+.bar select{height:34px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--tx);padding:0 8px;font-size:14px;max-width:60%}
+.cnt{color:var(--mut);font-size:13px;margin-left:auto}
+.chip{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:16px;height:32px;padding:0 10px;font-size:13px;cursor:pointer}
+.chip.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+main{padding:0 12px calc(78px + env(safe-area-inset-bottom))}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 12px;box-shadow:var(--sh);cursor:pointer;position:relative}
+.card .t{font-weight:650;font-size:16px;padding-right:30px}
+.card .s{color:var(--mut);font-size:13px;margin-top:2px}
+.card .a{font-size:13px;margin-top:6px;word-break:break-word}
+.card .a b{color:var(--mut);font-weight:500}
+.star{position:absolute;right:6px;top:6px;border:0;background:none;font-size:20px;color:#b9c2cc;cursor:pointer;width:32px;height:32px}
+.star.on{color:#e8a400}
+.tw{overflow:auto;border:1px solid var(--bd);border-radius:10px;background:var(--card);max-height:calc(100vh - 230px)}
+table{border-collapse:collapse;font-size:13px;min-width:100%}
+th,td{border-bottom:1px solid var(--bd);border-right:1px solid var(--bd);padding:5px 7px;text-align:left;vertical-align:top}
+th{background:var(--th);position:sticky;top:0;cursor:pointer;white-space:nowrap;z-index:1}
+td.w{min-width:160px}
+td:first-child,th:first-child{position:sticky;left:0;background:var(--card);z-index:1}
+th:first-child{background:var(--th);z-index:2}
+tr:hover td{background:var(--acc-s)}
+mark{background:var(--hl);color:inherit;border-radius:2px}
+.empty{color:var(--mut);text-align:center;padding:40px 0}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--card);border-top:1px solid var(--bd);z-index:6;padding-bottom:env(safe-area-inset-bottom)}
+nav button{flex:1;border:0;background:none;color:var(--mut);padding:7px 2px 6px;font-size:11px;cursor:pointer;position:relative}
+nav button .i{display:block;font-size:18px;line-height:22px}
+nav button.on{color:var(--acc);font-weight:650}
+nav .badge.z{background:var(--bd);color:var(--mut)}
+nav .badge{position:absolute;top:2px;right:calc(50% - 22px);background:var(--acc);color:#fff;border-radius:8px;font-size:10px;padding:0 5px;line-height:15px}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:10;display:none;align-items:flex-end;justify-content:center}
+.ov.show{display:flex}
+.sheet{background:var(--card);width:100%;max-width:640px;max-height:86vh;overflow:auto;border-radius:16px 16px 0 0;padding:14px 16px calc(16px + env(safe-area-inset-bottom))}
+.sheet h2{margin:0 0 4px;font-size:19px}
+.kv{display:grid;grid-template-columns:minmax(110px,38%) 1fr;gap:0;border-top:1px solid var(--bd);margin-top:8px}
+.kv div{padding:7px 4px;border-bottom:1px solid var(--bd);word-break:break-word}
+.kv .k{color:var(--mut);font-size:13px}
+.btns{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.btn{flex:1;min-width:120px;height:42px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font-size:15px;cursor:pointer}
+.btn.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+.cmp h3{font-size:16px;margin:16px 0 6px}
+.cmp p,.cmp li{font-size:14px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#222;color:#fff;padding:8px 14px;border-radius:18px;font-size:14px;z-index:20;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:.92}
+.colsel{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.colsel label{font-size:13px;border:1px solid var(--bd);border-radius:14px;padding:4px 9px;display:flex;gap:4px;align-items:center}
+.about{font-size:14px}
+.about p{margin:6px 0}
+[data-theme=dark] .btn.p,[data-theme=dark] .chip.on{color:#0b1a2a}
+</style>
+</head>
+<body>
+<header>
+ <div class="hrow">
+  <h1>SMD-корпуса</h1>
+  <button class="ib" id="bFav" title="Только избранное">★</button>
+  <button class="ib" id="bView" title="Карточки / таблица">▦</button>
+  <button class="ib" id="bTheme" title="Тема">☾</button>
+  <button class="ib" id="bMenu" title="Меню">⋮</button>
+ </div>
+ <div class="search"><input id="q" type="search" placeholder="Поиск: sc88a, 0603, 7343-43, SOT363…" autocomplete="off"><button id="qx" aria-label="Очистить">✕</button></div>
+</header>
+<div class="bar" id="bar"></div>
+<main id="main"></main>
+<nav id="nav"></nav>
+<div class="ov" id="ov"><div class="sheet" id="sheet"></div></div>
+<div class="toast" id="toast"></div>
+<script>/*DATA*/</script>
+<script>
+(function(){
+const D=window.SMD_DATA, C=window.SMD_COMPARE;
+const ICON={semi:"◧",chip:"▭",tant:"▮",alu:"◎",poly:"▤",cmp:"⇄"};
+const LS=k=>{try{return JSON.parse(localStorage.getItem("smd_"+k))}catch(e){return null}};
+const SS=(k,v)=>{try{localStorage.setItem("smd_"+k,JSON.stringify(v))}catch(e){}};
+let st={tab:LS("tab")||"semi",q:"",group:"",view:LS("view")||(innerWidth>=900?"table":"cards"),fav:false,favs:new Set(LS("favs")||[]),sort:null,hidden:LS("hidden")||{}};
+const $=id=>document.getElementById(id);
+const norm=s=>String(s||"").toLowerCase().replace(/ё/g,"е").replace(/[×х]/g,"x").replace(/,/g,".").replace(/[\s\-–—_()\/\[\]·.]/g,"");
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function hl(v){v=String(v==null?"":v);if(!st.q)return esc(v);const nq=norm(st.q);if(!nq)return esc(v);
+ // map normalized positions back to original
+ let map=[],ns="";for(let i=0;i<v.length;i++){const n=norm(v[i]);for(const ch of n){ns+=ch;map.push(i)}}
+ let out="",last=0,idx=ns.indexOf(nq);if(idx<0)return esc(v);
+ while(idx>=0){const s=map[idx],e=map[idx+nq.length-1]+1;if(s>=last){out+=esc(v.slice(last,s))+"<mark>"+esc(v.slice(s,e))+"</mark>";last=e}idx=ns.indexOf(nq,idx+nq.length)}
+ return out+esc(v.slice(last));}
+const rowKey=(t,r)=>t.id+":"+r[t.cols.findIndex(c=>c[2])]+":"+r[0];
+const titleIdx=t=>t.cols.findIndex(c=>c[2]);
+function match(t,r){if(!st.q)return true;const nq=norm(st.q);return r.some(v=>norm(v).includes(nq));}
+function filtered(t){let rows=t.rows.filter(r=>match(t,r));
+ if(st.group&&t.groupCol>=0)rows=rows.filter(r=>r[t.groupCol]===st.group);
+ if(st.fav)rows=rows.filter(r=>st.favs.has(rowKey(t,r)));
+ if(st.sort&&st.sort.tab===t.id){const i=st.sort.i,d=st.sort.d;rows=rows.slice().sort((a,b)=>String(a[i]).localeCompare(String(b[i]),"ru",{numeric:true})*d)}
+ return rows;}
+function cmpMatches(){if(!st.q)return 0;const nq=norm(st.q);let n=0;[...C.table.rows,...C.choose.rows].forEach(r=>{if(r.some(v=>norm(v).includes(nq)))n++});return n;}
+function nav(){const tabs=[...D.map(t=>[t.id,t.short]),["cmp","MLCC/Ta"]];
+ $("nav").innerHTML=tabs.map(([id,s])=>{let b="";if(st.q){const n=id==="cmp"?cmpMatches():D.find(t=>t.id===id).rows.filter(r=>match(D.find(t=>t.id===id),r)).length;b=`<span class="badge${n?"":" z"}">${n}</span>`}
+  return `<button data-t="${id}" class="${st.tab===id?"on":""}"><span class="i">${ICON[id]}</span>${s}${b}</button>`}).join("");}
+function bar(t){if(!t){$("bar").innerHTML=`<span class="cnt">${esc(C.title)}</span>`;return}
+ const groups=t.groupCol>=0?[...new Set(t.rows.map(r=>r[t.groupCol]))]:[];
+ let h="";if(groups.length)h+=`<select id="grp"><option value="">Все группы</option>${groups.map(g=>`<option ${g===st.group?"selected":""}>${esc(g)}</option>`).join("")}</select>`;
+ if(st.view==="table")h+=`<button class="chip" id="bCols">Столбцы</button>`;
+ h+=`<button class="chip" id="bCsv">CSV</button><span class="cnt" id="cnt"></span>`;$("bar").innerHTML=h;}
+function visCols(t){const hid=st.hidden[t.id]||[];return t.cols.map((c,i)=>i).filter(i=>!hid.includes(t.cols[i][0]));}
+function render(){const t=D.find(x=>x.id===st.tab);nav();bar(t);$("bFav").classList.toggle("on",st.fav);
+ if(!t){renderCmp();return}
+ const rows=filtered(t),ti=titleIdx(t);$("cnt").textContent=rows.length+" из "+t.rows.length;
+ if(!rows.length){$("main").innerHTML=`<div class="empty">Ничего не найдено${st.q?" по запросу «"+esc(st.q)+"»":""}</div>`;return}
+ if(st.view==="cards"){
+  $("main").innerHTML=`<div class="cards">${rows.map((r)=>{const k=rowKey(t,r);
+   const sub=t.cols.slice(ti+1,ti+3).map((c,j)=>r[ti+1+j]).filter(Boolean).join(" · ");
+   const extra=t.cols.map((c,i)=>[c,r[i]]).filter(([c,v],i)=>i>ti+2&&v&&c[0]!=="note").slice(0,st.q?40:5);
+   let ex=extra; if(st.q){const nq=norm(st.q);const m=extra.filter(([c,v])=>norm(v).includes(nq));ex=(m.length?m:extra).slice(0,5);} 
+   return `<div class="card" data-k="${esc(k)}"><button class="star ${st.favs.has(k)?"on":""}" data-s="${esc(k)}">★</button>
+    <div class="t">${hl(r[ti])}</div><div class="s">${t.groupCol>=0&&t.groupCol!==ti?hl(r[t.groupCol])+" · ":""}${hl(sub)}</div>
+    <div class="a">${ex.map(([c,v])=>`<b>${esc(c[1])}:</b> ${hl(v)}`).join("; ")}</div></div>`}).join("")}</div>`;
+ }else{const vc=visCols(t);
+  $("main").innerHTML=`<div class="tw"><table><thead><tr><th>★</th>${vc.map(i=>`<th data-i="${i}">${esc(t.cols[i][1])}${st.sort&&st.sort.tab===t.id&&st.sort.i===i?(st.sort.d>0?" ▲":" ▼"):""}</th>`).join("")}</tr></thead><tbody>${
+   rows.map(r=>{const k=rowKey(t,r);return `<tr data-k="${esc(k)}"><td><button class="star ${st.favs.has(k)?"on":""}" data-s="${esc(k)}" style="position:static;width:24px;height:24px;font-size:16px">★</button></td>${vc.map(i=>`<td class="${t.cols[i][2]||t.cols[i][0]==="note"?"w":""}">${hl(r[i])}</td>`).join("")}</tr>`}).join("")}</tbody></table></div>`;}
+}
+function renderCmp(){const tb=(o)=>`<div class="tw" style="max-height:none"><table><thead><tr>${o.cols.map(c=>`<th style="cursor:default">${esc(c)}</th>`).join("")}</tr></thead><tbody>${o.rows.map(r=>`<tr>${r.map((v,i)=>`<td class="${i?"w":""}">${hl(v)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+ $("main").innerHTML=`<div class="cmp"><p>${hl(C.intro)}</p><h3>Основные характеристики</h3>${tb(C.table)}<h3>Где что выбирать</h3>${tb(C.choose)}<h3>Практические замечания</h3><ul>${C.notes.map(n=>`<li>${hl(n)}</li>`).join("")}</ul></div>`;}
+function findRow(k){for(const t of D)for(const r of t.rows)if(rowKey(t,r)===k)return[t,r];return[null,null]}
+function openCard(k){const[t,r]=findRow(k);if(!t)return;const ti=titleIdx(t);
+ const kv=t.cols.map((c,i)=>r[i]?`<div class="k">${esc(c[1])}</div><div>${hl(r[i])}</div>`:"").join("");
+ $("sheet").innerHTML=`<h2>${esc(r[ti])}</h2><div class="s" style="color:var(--mut)">${esc(t.title)}</div><div class="kv">${kv}</div>
+ <div class="btns"><button class="btn p" id="cp">Копировать</button><button class="btn" id="fv">${st.favs.has(k)?"★ Убрать":"☆ В избранное"}</button><button class="btn" id="cl">Закрыть</button></div>`;
+ $("ov").classList.add("show");$("ov").dataset.mode="card";
+ $("cp").onclick=()=>copy(t.cols.map((c,i)=>r[i]?c[1]+": "+r[i]:"").filter(Boolean).join("\n"));
+ $("fv").onclick=()=>{togFav(k);openCard(k)};$("cl").onclick=closeOv;}
+function closeOv(){$("ov").classList.remove("show")}
+function toast(m){const e=$("toast");e.textContent=m;e.classList.add("show");clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove("show"),1800)}
+function copy(txt){if(window.Android&&Android.copy){Android.copy(txt);return}
+ (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(()=>toast("Скопировано")).catch(()=>{const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast("Скопировано")}catch(e){toast("Не удалось скопировать")}ta.remove()})}
+function togFav(k){st.favs.has(k)?st.favs.delete(k):st.favs.add(k);SS("favs",[...st.favs]);render()}
+function csv(){const t=D.find(x=>x.id===st.tab);if(!t)return;const rows=filtered(t),vc=st.view==="table"?visCols(t):t.cols.map((c,i)=>i);
+ const q=v=>{v=String(v==null?"":v);return /[;"\n\r]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
+ const txt="\uFEFF"+[vc.map(i=>q(t.cols[i][1])).join(";"),...rows.map(r=>vc.map(i=>q(r[i])).join(";"))].join("\r\n")+"\r\n";
+ const name="smd_"+t.id+".csv";
+ if(window.Android&&Android.saveCsv){Android.saveCsv(name,txt);return}
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([txt],{type:"text/csv;charset=utf-8"}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},500);toast("CSV сохранён");}
+function colsDlg(){const t=D.find(x=>x.id===st.tab);const hid=st.hidden[t.id]||[];
+ $("sheet").innerHTML=`<h2>Столбцы</h2><div class="colsel">${t.cols.map(c=>`<label><input type="checkbox" data-c="${c[0]}" ${hid.includes(c[0])?"":"checked"}>${esc(c[1])}</label>`).join("")}</div>
+ <div class="btns"><button class="btn" id="hEmpty">Скрыть пустые</button><button class="btn" id="sAll">Показать все</button><button class="btn p" id="cl">Готово</button></div>`;
+ $("ov").classList.add("show");
+ const save=()=>{st.hidden[t.id]=[...$("sheet").querySelectorAll("input:not(:checked)")].map(e=>e.dataset.c);SS("hidden",st.hidden);render()};
+ $("sheet").querySelectorAll("input").forEach(e=>e.onchange=save);
+ $("hEmpty").onclick=()=>{const rows=filtered(t);t.cols.forEach((c,i)=>{if(!rows.some(r=>r[i]))$("sheet").querySelector(`[data-c="${c[0]}"]`).checked=false});save()};
+ $("sAll").onclick=()=>{$("sheet").querySelectorAll("input").forEach(e=>e.checked=true);save()};$("cl").onclick=closeOv;}
+function menu(){const n=D.reduce((a,t)=>a+t.rows.length,0);
+ $("sheet").innerHTML=`<h2>О справочнике</h2><div class="about"><p>Справочник синонимов SMD-корпусов: обозначения JEDEC, EIAJ/JEITA и производителей. Записей: ${n}. Работает без интернета.</p>
+ <p>Поиск игнорирует регистр, дефисы, скобки, пробелы и «×/x»: «sc88a» найдёт SC-88A, «4.3x2.8» — «4,3×2,8».</p>
+ <p>Знак «≈» — близкий, но не идентичный корпус. Пустая ячейка — обозначение не найдено или производитель такой корпус не выпускает. Часть кодов внесена без первоисточника — перед применением сверяйте посадочное место с чертежом в даташите.</p>
+ <p style="color:var(--mut)">Версия 1.0 · ${new Date(2026,9,2).toLocaleDateString("ru-RU")}</p></div>
+ <div class="btns"><button class="btn" id="clrFav">Очистить избранное</button><button class="btn p" id="cl">Закрыть</button></div>`;
+ $("ov").classList.add("show");$("cl").onclick=closeOv;$("clrFav").onclick=()=>{st.favs.clear();SS("favs",[]);render();toast("Избранное очищено")};}
+// events
+$("nav").onclick=e=>{const b=e.target.closest("button");if(!b)return;st.tab=b.dataset.t;st.group="";SS("tab",st.tab);render();scrollTo(0,0)};
+$("main").onclick=e=>{const s=e.target.closest("[data-s]");if(s){e.stopPropagation();togFav(s.dataset.s);return}
+ const th=e.target.closest("th[data-i]");if(th){const i=+th.dataset.i;st.sort=st.sort&&st.sort.tab===st.tab&&st.sort.i===i?(st.sort.d>0?{tab:st.tab,i,d:-1}:null):{tab:st.tab,i,d:1};render();return}
+ const c=e.target.closest("[data-k]");if(c)openCard(c.dataset.k)};
+$("bar").onclick=e=>{if(e.target.id==="bCsv")csv();if(e.target.id==="bCols")colsDlg()};
+$("bar").onchange=e=>{if(e.target.id==="grp"){st.group=e.target.value;render()}};
+let qt;$("q").oninput=e=>{clearTimeout(qt);qt=setTimeout(()=>{st.q=e.target.value.trim();
+ if(st.q){const cur=D.find(t=>t.id===st.tab);if(cur&&!cur.rows.some(r=>match(cur,r))){const f=D.find(t=>t.rows.some(r=>match(t,r)));if(f)st.tab=f.id}}render()},120)};
+$("qx").onclick=()=>{$("q").value="";st.q="";render()};
+$("bFav").onclick=()=>{st.fav=!st.fav;render()};
+$("bView").onclick=()=>{st.view=st.view==="cards"?"table":"cards";SS("view",st.view);render()};
+function setTheme(t){document.documentElement.dataset.theme=t;$("bTheme").textContent=t==="dark"?"☀":"☾";SS("theme",t);if(window.Android&&Android.setDark)Android.setDark(t==="dark")}
+$("bTheme").onclick=()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark");
+$("bMenu").onclick=menu;
+$("ov").onclick=e=>{if(e.target.id==="ov")closeOv()};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeOv()});
+// Android back: returns true if handled
+window.appBack=function(){if($("ov").classList.contains("show")){closeOv();return true}if(st.q){$("q").value="";st.q="";render();return true}if(st.fav){st.fav=false;render();return true}return false};
+window.appToast=toast;
+setTheme(LS("theme")||"light");render();
+if("serviceWorker"in navigator&&location.protocol.startsWith("http")&&!window.Android){navigator.serviceWorker.register("sw.js").catch(()=>{})}
+})();
+</script>
+</body>
+</html>
